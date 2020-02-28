@@ -1,0 +1,16 @@
+//Arduino code
+#include <SoftwareSerial.h>
+SoftwareSerial s(3,2); arduino 3 pin will be connected nodumcu 3
+
+ 
+void setup() {
+s.begin(9600);
+}
+ 
+void loop() {
+int data=50;
+if(s.available()>0)
+{
+ s.write(data);
+}
+}
